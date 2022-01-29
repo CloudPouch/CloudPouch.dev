@@ -1,7 +1,7 @@
 # CloudPouch
 [Website](https://cloudpouch.dev) • [Releases](https://github.com/CloudPouch/CloudPouch.dev/releases) • [Buy license](https://cloudpouch.dev/#pricing)
 
-# Minimal IAM User privledges
+## Minimal IAM User privledges
 IF you want to use a dedicated IAM user with minial privledges please use the following policy:
 ```JSON
 {
