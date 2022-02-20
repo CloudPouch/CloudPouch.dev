@@ -30,7 +30,7 @@ If you want to use a dedicated IAM user with minial privledges please use the fo
 * `organizations:ListAccounts` used to resolve names of your accounts in the AWS Organizations. Used only when you have paying account.
 
 #### Insights privileges 
-Insights check your resources in the AWS cloud and provide useful information for cost optimization. They can detect *waste*, for example unattached EBS drives or wrongly configured resources such us over-provisioned DynamoDB tables.
+Insights check your resources in the AWS cloud and provide useful information for cost optimization. They can detect *waste*, for example unattached EBS drives or wrongly configured resources such as over-provisioned DynamoDB tables.
 
 * EC2 - Other insights use following privileges:
     * `ec2:Describe*`
