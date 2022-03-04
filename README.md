@@ -41,4 +41,5 @@ Insights check your resources in the AWS cloud and provide useful information fo
     * `application-autoscaling:DescribeScalableTargets`
 
 
-
+## AWS SSO Configuration
+To use AWS SSO you need to properly configure your SSO profile (in `~/.aws/config` file), according to the AWS documentation [Configuring the AWS CLI to use AWS Single Sign-On](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html).
