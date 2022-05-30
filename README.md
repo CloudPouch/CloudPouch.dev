@@ -11,13 +11,14 @@ If you want to use a dedicated IAM user with minial privledges please use the fo
             "Sid": "CloudPouchMinimalAccess",
             "Effect": "Allow",
             "Action": [
+                "application-autoscaling:DescribeScalableTargets",
                 "ce:GetCostAndUsage",
-                "organizations:ListAccounts",
-                "ec2:Describe*",
+                "cloudwatch:GetMetricStatistics",
                 "dynamodb:DescribeTable",
                 "dynamodb:ListTables",
-                "cloudwatch:GetMetricStatistics",
-                "application-autoscaling:DescribeScalableTargets"
+                "ec2:Describe*",
+                "logs:DescribeLogGroups",
+                "organizations:ListAccounts"
             ],
             "Resource": "*"
         }
@@ -39,6 +40,8 @@ Insights check your resources in the AWS cloud and provide useful information fo
     * `dynamodb:ListTables`
     * `cloudwatch:GetMetricStatistics`
     * `application-autoscaling:DescribeScalableTargets`
+* CloudWatch insights use:
+    * `logs:DescribeLogGroups`
 
 
 ## AWS SSO Configuration
