@@ -32,6 +32,31 @@ Click this button to create `CloudPouch-access-policy-stack` on your AWS account
 
 [![Launch Stack](https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=CloudPouch-access-policy-stack&templateURL=https://cloudpouch-public.s3.amazonaws.com/cloudformation-policy.yml)
 
+<details>
+<summary><b>Step-by-step guide of CloudFormation deployment</b></summary><p>
+
+1. This is the first CloudFormation service console with the template already pre-loaded. Click `Next`.
+![](images/cf-creation-01.png)
+1. There are parameters to set. Click `Next`.
+![](images/cf-creation-02.png)
+1. Leaver everything as is. Click `Next`.
+![](images/cf-creation-03.png)
+![](images/cf-creation-04.png)
+1. Review and click `Next`.
+![](images/cf-creation-05.png)
+![](images/cf-creation-06.png)
+1. CloudFormation deployment starts.
+![](images/cf-creation-07.png)
+1. After a moment it is finished.
+![](images/cf-creation-08.png)
+1. Go to [IAM Policies](https://us-east-1.console.aws.amazon.com/iamv2/home#/policies) tab and find the policy named `CloudPouch-costs-policy`.
+![](images/cf-creation-09.png)
+1. Now you need to add this policy to an IAM User or a Role.
+</p>
+</details>
+
+<br />
+
 ### Attach policy to an IAM User
 1. After Policy is created go to the [IAM Users tab](https://us-east-1.console.aws.amazon.com/iamv2/home?region=us-east-1#/users), select a user and click `Add Permissions` button (select again `Add Permissions` from the dropdown list).
 1. Select `Attach policies directly` and in the search below enter the name of the newly created IAM Policy: `CloudPouch-costs-policy` ![Attach policies directly](images/add_permissions.png)
