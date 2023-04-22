@@ -1,0 +1,22 @@
+Resources:
+  CloudPouchCostsPolicy:
+    Type: 'AWS::IAM::ManagedPolicy'
+    Properties:
+      ManagedPolicyName: CloudPouch-costs-policy
+      Description: Policy for CloudPouch application to access billing costs and various AWS services
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Action:
+              - application-autoscaling:DescribeScalableTargets
+              - ce:GetCostAndUsage
+              - cloudwatch:GetMetricStatistics
+              - dynamodb:DescribeTable
+              - dynamodb:ListTables
+              - ec2:Describe*
+              - logs:DescribeLogGroups
+              - organizations:ListAccounts
+              - rds:DescribeDBClusters
+              - rds:DescribeDBInstances
+            Resource: '*'

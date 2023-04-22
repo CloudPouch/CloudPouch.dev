@@ -27,6 +27,17 @@ If you want to use a dedicated IAM user with minimal privileges please use the f
     ]
 }
 ```
+## Create CloudFormation stack
+Click this button to create `CloudPouch-access-policy-stack` on your AWS account with the IAM policy that you can attach to any IAM Role or IAM User.
+
+[![Launch Stack](https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=CloudPouch-access-policy-stack&templateURL=https://cloudpouch-public.s3.amazonaws.com/cloudformation-policy.yml)
+
+### Attach policy to an IAM User
+1. After Policy is created go to the [IAM Users tab](https://us-east-1.console.aws.amazon.com/iamv2/home?region=us-east-1#/users), select a user and click `Add Permissions` button (select again `Add Permissions` from the dropdown list).
+1. Select `Attach policies directly` and in the search below enter the name of the newly created IAM Policy: `CloudPouch-costs-policy` ![Attach policies directly](images/add_permissions.png)
+1. Tick checkbox next the it and click `Next`
+1. On the next screen click `Add Permissions` button.
+1. Done ✅
 ### Policy explanation
 #### Necessary privileges
 * `ce:GetCostAndUsage` is crucial as allows to fetch cost data. 
