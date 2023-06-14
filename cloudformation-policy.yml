@@ -15,8 +15,12 @@ Resources:
               - dynamodb:DescribeTable
               - dynamodb:ListTables
               - ec2:Describe*
+              - elasticloadbalancing:DescribeLoadBalancers
+              - elasticloadbalancing:DescribeTargetGroups
+              - elasticloadbalancing:DescribeTargetHealth
               - logs:DescribeLogGroups
               - organizations:ListAccounts
               - rds:DescribeDBClusters
               - rds:DescribeDBInstances
+              - rds:DescribeDBSnapshots
             Resource: '*'

@@ -17,16 +17,22 @@ If you want to use a dedicated IAM user with minimal privileges please use the f
                 "dynamodb:DescribeTable",
                 "dynamodb:ListTables",
                 "ec2:Describe*",
+                "elasticloadbalancing:DescribeLoadBalancers",
+                "elasticloadbalancing:DescribeTargetGroups",
+                "elasticloadbalancing:DescribeTargetHealth",
                 "logs:DescribeLogGroups",
                 "organizations:ListAccounts",
+                "rds:DescribeDBClusters",
                 "rds:DescribeDBInstances",
-                "rds:DescribeDBClusters"
+                "rds:DescribeDBSnapshots"
             ],
             "Resource": "*"
         }
     ]
 }
 ```
+Last change for version 1.24.0.
+
 ## Create CloudFormation stack
 Click this button to create `CloudPouch-access-policy-stack` on your AWS account with the IAM policy that you can attach to any IAM Role or IAM User.
 
@@ -80,6 +86,14 @@ Insights check your resources in the AWS cloud and provide useful information fo
     * `application-autoscaling:DescribeScalableTargets`
 * CloudWatch insights use:
     * `logs:DescribeLogGroups`
+* RDS insights use:
+    - `rds:DescribeDBClusters`
+    - `rds:DescribeDBInstances`
+    - `rds:DescribeDBSnapshots`
+* ELB insights use:
+    - `elasticloadbalancing:DescribeLoadBalancers`
+    - `elasticloadbalancing:DescribeTargetGroups`
+    - `elasticloadbalancing:DescribeTargetHealth`
 
 
 ## AWS SSO Configuration
