@@ -33,6 +33,34 @@ If you want to use a dedicated IAM user with minimal privileges please use the f
 ```
 Last change for version 1.24.0.
 
+## Optional: Configuring Certificates in CloudPouch Application
+The CloudPouch includes an option that enables users to configure and use a certificate when connecting to the internet. This feature is particularly beneficial for users operating within corporate networks that frequently have stringent security protocols, often mandating certificate use for internet resource access.
+
+The CloudPouch supports the use of custom and global SSL/TLS certificates in PEM format (`.pem`). These could be certificates issued by widely recognized CAs, or those signed by private or self-signed authorities. Please make sure to specify the correct path to your certificate when configuring your CloudPouch application.
+
+To set up the certificate, please define the path to the certificate file in the `config.json` file, as shown below:
+```JSON
+{
+  "certificatePath": "<Path to your .pem certificate file>"
+}
+```
+
+Here, `certificatePath` should contain the full path to your `.pem` file, including the file name. Please ensure you have the necessary read permissions to access this file.
+
+Ensure to restart the CloudPouch application for the new certificate settings to take effect.
+
+Should you need more detailed information about supported certificates, refer to the public documentation regarding `AWS_CA_BUNDLE` and `NODE_EXTRA_CA_CERTS` on the Internet.
+
+### File location
+The `config.json` file location depends on the OS you're using:
+
+* MacOs - `/Users/<YOUR_USER_NAME>/Library/Application Support/CloudPouch/config.json`
+* Windows - `c:\Users\<YOUR_USER_NAME>\AppData\Roaming\CloudPouch\config.json`
+* Linux - `~/.config/CloudPouch/config.json`
+
+
+Certificate support was introduces in version [1.25.0](https://github.com/CloudPouch/CloudPouch.dev/releases/tag/v1.25.0).
+
 ## Create CloudFormation stack
 Click this button to create `CloudPouch-access-policy-stack` on your AWS account with the IAM policy that you can attach to any IAM Role or IAM User.
 

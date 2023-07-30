@@ -1,5 +1,11 @@
 # CloudPouch User Guide
 
+## Configuration
+The `config.json` file location depends on the OS you're using:
+
+* MacOs - `/Users/<YOUR_USER_NAME>/Library/Application Support/CloudPouch/config.json`
+* Windows - `c:\Users\<YOUR_USER_NAME>\AppData\Roaming\CloudPouch\config.json`
+* Linux - `~/.config/CloudPouch/config.json`
 ## Logs
 The `main.log` file location depends on the OS you're using:
 
