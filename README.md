@@ -31,7 +31,7 @@ If you want to use a dedicated IAM user with minimal privileges please use the f
     ]
 }
 ```
-Last change for version 1.24.0.
+Last change for version [1.24.0](https://github.com/CloudPouch/CloudPouch.dev/releases/tag/v1.24.0).
 
 ## Optional: Configuring Certificates in CloudPouch Application
 The CloudPouch includes an option that enables users to configure and use a certificate when connecting to the internet. This feature is particularly beneficial for users operating within corporate networks that frequently have stringent security protocols, often mandating certificate use for internet resource access.
