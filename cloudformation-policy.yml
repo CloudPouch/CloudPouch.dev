@@ -15,6 +15,7 @@ Resources:
               - dynamodb:DescribeTable
               - dynamodb:ListTables
               - ec2:Describe*
+              - ebs:ListSnapshotBlocks
               - elasticloadbalancing:DescribeLoadBalancers
               - elasticloadbalancing:DescribeTargetGroups
               - elasticloadbalancing:DescribeTargetHealth
