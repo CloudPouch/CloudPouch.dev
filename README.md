@@ -18,6 +18,7 @@ If you want to use a dedicated IAM user with minimal privileges please use the f
                 "dynamodb:ListTables",
                 "ec2:Describe*",
                 "ebs:ListSnapshotBlocks",
+                "ebs:ListChangedBlocks",
                 "elasticloadbalancing:DescribeLoadBalancers",
                 "elasticloadbalancing:DescribeTargetGroups",
                 "elasticloadbalancing:DescribeTargetHealth",
