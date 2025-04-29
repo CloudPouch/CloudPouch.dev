@@ -6,7 +6,7 @@ CloudPouch is an advanced FinOps tool designed for AWS cloud cost optimization. 
 
 It offers granular, actionable insights across EC2, RDS, EBS, ECR, S3, VPC, Glue, DynamoDB, DocumentDB, CloudWatch, and ELB. Its rich UI, data drill-down capabilities, anomaly detection, and direct CloudWatch integration make it an indispensable tool for AWS cost optimization experts.
 
-Here is the previous detailed response formatted as Markdown for easy copying:  
+![CloudPouch Application](images/CloudPouch_1.34.webp)
 
 ## Cost Insights - automatically find saving opportunities
 
