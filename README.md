@@ -1,7 +1,6 @@
-# CloudPouch
-[Website](https://cloudpouch.dev) • [Releases](https://github.com/CloudPouch/CloudPouch.dev/releases) • [Buy license](https://cloudpouch.dev/#pricing) • [User Guide](https://github.com/CloudPouch/CloudPouch.dev/blob/main/userGuide/user-guide.md)
+🌐 [Website](https://cloudpouch.dev) • 🚀 [Releases](https://github.com/CloudPouch/CloudPouch.dev/releases) • 💳[Buy license](https://cloudpouch.dev/#pricing) • 📖[User Guide](https://github.com/CloudPouch/CloudPouch.dev/blob/main/userGuide/user-guide.md)
 
-# What is CloudPouch
+# What is CloudPouch?
 CloudPouch is an advanced FinOps tool designed for AWS cloud cost optimization. It analyzes AWS usage, identifies unnecessary expenses, and provides actionable recommendations. The app is tailored for cloud architects, DevOps, and FinOps specialists, enabling fast detection of cost anomalies, resource waste, and optimization opportunities.
 
 It offers granular, actionable insights across EC2, RDS, EBS, ECR, S3, VPC, Glue, DynamoDB, DocumentDB, CloudWatch, and ELB. Its rich UI, data drill-down capabilities, anomaly detection, and direct CloudWatch integration make it an indispensable tool for AWS cost optimization experts.
