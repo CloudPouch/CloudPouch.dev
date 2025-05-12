@@ -99,4 +99,4 @@ sso_registration_scopes = sso:account:access
 ```
 **Tip**: You can reference the same sso-session `my-sso` from as many profiles as you need.
 
-For full details, see the [AWS CLI SSO guide](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html).
+For full details, see the [AWS CLI SSO guide](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html) or read my article [Simplified Configuration of SSO Profiles in AWS CLI Using SSO Sessions](https://dev.to/aws-heroes/simplified-configuration-of-sso-profiles-in-aws-cli-using-sso-sessions-8hh).
