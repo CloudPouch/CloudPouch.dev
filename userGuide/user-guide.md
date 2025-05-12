@@ -99,16 +99,10 @@ To configure CloudPouch to use your custom certificate:
    }
 ```
 
--	`certificatePath` should contain the full path to your PEM file, including the file name.
--	Ensure the application has read permissions for this file.
+-	`certificatePath` should contain the full path (absolute, not relative path) to your PEM file, including the file name.
+-	Ensure the application has **read permissions** for this file.
 
 3. Restart the CloudPouch application for the changes to take effect.
-
-Here, `certificatePath` should contain the full path to your `.pem` file, including the file name. Please ensure you have the necessary read permissions to access this file.
-
-Ensure to restart the CloudPouch application for the new certificate settings to take effect.
-
-Should you need more detailed information about supported certificates, refer to the public documentation regarding `AWS_CA_BUNDLE` and `NODE_EXTRA_CA_CERTS` on the Internet.
 
 ### File Location
 The location of `config.json` varies by operating system:
