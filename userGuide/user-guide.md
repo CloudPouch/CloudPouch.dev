@@ -1,5 +1,23 @@
 # CloudPouch User Guide
 
+Table of contents
+
+- [Configuration files](#configuration-files)
+- [Logs](#logs)
+- [Cached data](#cached-data)
+- [Minimal IAM User privileges](#minimal-iam-user-privileges)
+- [Configuring Certificates in CloudPouch Application for Zscaler](#configuring-certificates-in-cloudpouch-application-for-zscaler)
+  - [Why Certificate Support?](#why-certificate-support)
+  - [Configuration](#configuration-1)
+  - [File Location](#file-location)
+- [Create access policy via CloudFormation stack](#create-access-policy-via-cloudformation-stack)
+- [Attach policy to an IAM User](#attach-policy-to-an-iam-user)
+- [Policy explanation](#policy-explanation)
+  - [Necessary privileges](#necessary-privileges)
+  - [Insights privileges](#insights-privileges)
+- [Troubleshooting](#troubleshooting)
+  - [Ubuntu Linux problem](#ubuntu-linux-problem)
+
 ## Configuration files
 The `config.json` file location depends on the OS you're using:
 
@@ -54,17 +72,37 @@ If you want to use a dedicated IAM user with minimal privileges please use the f
 ```
 Last change for version [1.24.0](https://github.com/CloudPouch/CloudPouch.dev/releases/tag/v1.24.0).
 
-## Optional: Configuring Certificates in CloudPouch Application
-The CloudPouch includes an option that enables users to configure and use a certificate when connecting to the internet. This feature is particularly beneficial for users operating within corporate networks that frequently have stringent security protocols, often mandating certificate use for internet resource access.
+## Configuring Certificates in CloudPouch Application for Zscaler
 
-The CloudPouch supports the use of custom and global SSL/TLS certificates in PEM format (`.pem`). These could be certificates issued by widely recognized CAs, or those signed by private or self-signed authorities. Please make sure to specify the correct path to your certificate when configuring your CloudPouch application.
+CloudPouch supports the use of custom and global SSL/TLS certificates in PEM format (`.pem`). This feature ensures secure connections in environments with strict certificate requirements, such as corporate networks that intercept or re-sign HTTPS traffic with an internal Certificate Authority (CA).
 
-To set up the certificate, please define the path to the certificate file in the `config.json` file, as shown below:
-```JSON
-{
-  "certificatePath": "<Path to your .pem certificate file>"
-}
+### Why Certificate Support?
+
+In many enterprise setups, security appliances or proxy services perform TLS inspection—decrypting and scanning outbound traffic for malware or data exfiltration, then re-encrypting it with a corporate CA. Without trusting the corporate CA, client applications will fail to establish HTTPS connections due to unrecognized or untrusted certificates. By allowing you to specify a custom PEM certificate bundle, CloudPouch can trust these intercepted connections and communicate successfully.
+
+Common corporate solutions that enforce TLS inspection include:
+
+- **Zscaler Internet Access**
+- **Blue Coat (Symantec) ProxySG**
+- **F5 BIG-IP SSL Orchestrator**
+
+### Configuration
+
+To configure CloudPouch to use your custom certificate:
+
+1. Open your `config.json` file.  
+2. Define the path to your `.pem` certificate bundle:
+
+```json
+   {
+     "certificatePath": "<Path to your .pem certificate file>"
+   }
 ```
+
+-	`certificatePath` should contain the full path to your PEM file, including the file name.
+-	Ensure the application has read permissions for this file.
+
+3. Restart the CloudPouch application for the changes to take effect.
 
 Here, `certificatePath` should contain the full path to your `.pem` file, including the file name. Please ensure you have the necessary read permissions to access this file.
 
@@ -72,17 +110,16 @@ Ensure to restart the CloudPouch application for the new certificate settings to
 
 Should you need more detailed information about supported certificates, refer to the public documentation regarding `AWS_CA_BUNDLE` and `NODE_EXTRA_CA_CERTS` on the Internet.
 
-### File location
-The `config.json` file location depends on the OS you're using:
+### File Location
+The location of `config.json` varies by operating system:
 
-* MacOs - `/Users/<YOUR_USER_NAME>/Library/Application Support/CloudPouch/config.json`
-* Windows - `c:\Users\<YOUR_USER_NAME>\AppData\Roaming\CloudPouch\config.json`
-* Linux - `~/.config/CloudPouch/config.json`
+- **macOS**: `/Users/<YOUR_USER_NAME>/Library/Application Support/CloudPouch/config.json`
+- **Windows**: `C:\Users\<YOUR_USER_NAME>\AppData\Roaming\CloudPouch\config.json`
+- **Linux**: `~/.config/CloudPouch/config.json`
 
+Certificate support was introduced in version [1.25.0](https://github.com/CloudPouch/CloudPouch.dev/releases/tag/v1.25.0), explicitly enabling custom SSL/TLS certificates to accommodate corporate proxy requirements. For more details, see the public documentation on `AWS_CA_BUNDLE` and `NODE_EXTRA_CA_CERTS`.
 
-Certificate support was introduces in version [1.25.0](https://github.com/CloudPouch/CloudPouch.dev/releases/tag/v1.25.0).
-
-## Create CloudFormation stack
+## Create access policy via CloudFormation stack
 Click this button to create `CloudPouch-access-policy-stack` on your AWS account with the IAM policy that you can attach to any IAM Role or IAM User.
 
 [![Launch Stack](https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=CloudPouch-access-policy-stack&templateURL=https://cloudpouch-public.s3.amazonaws.com/cloudformation-policy.yml)
