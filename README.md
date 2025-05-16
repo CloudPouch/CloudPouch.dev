@@ -126,6 +126,6 @@ If you are using macOS and Homebrew you can install CloudPouch by executing sing
 brew install cloudpouch
 ```
 
-Need a quick walkthrough? Watch the short demo video 
+Need a quick walkthrough? Watch the short demo video on [YouTube](https://www.youtube.com/watch?v=-kG0WIC3x8I).
 
-<video src="https://github.com/CloudPouch/CloudPouch.dev/blob/main/images/CloudPouchBrew.mov" width="640" controls></video>
+[![CloudPouch demo](images/video-thumbnail.png)](https://www.youtube.com/watch?v=-kG0WIC3x8I "Watch the demo")
