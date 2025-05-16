@@ -1,5 +1,14 @@
 🌐 [Website](https://cloudpouch.dev) • 🚀 [Releases](https://github.com/CloudPouch/CloudPouch.dev/releases) • 💳 [Buy license](https://cloudpouch.dev/#pricing) • 📖 [User Guide](https://github.com/CloudPouch/CloudPouch.dev/blob/main/userGuide/user-guide.md)
 
+On this page:
+
+* [What is CloudPouch?](#what-is-cloudpouch)
+  * [Cost Insights - automatically find saving opportunities](#cost-insights---automatically-find-saving-opportunities)
+* [AWS Credentials & Profiles](#aws-credentials--profiles)
+  * [AWS SSO Configuration](#aws-sso-configuration)
+* [How to install?](#how-to-install)
+  * Install on macOS using `brew`
+
 # What is CloudPouch?
 CloudPouch is an advanced FinOps tool designed for AWS cloud cost optimization. It analyzes AWS usage, identifies unnecessary expenses, and provides actionable recommendations. The app is tailored for cloud architects, DevOps, and FinOps specialists, enabling fast detection of cost anomalies, resource waste, and optimization opportunities.
 
@@ -100,3 +109,23 @@ sso_registration_scopes = sso:account:access
 **Tip**: You can reference the same sso-session `my-sso` from as many profiles as you need.
 
 For full details, see the [AWS CLI SSO guide](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html) or read my article [Simplified Configuration of SSO Profiles in AWS CLI Using SSO Sessions](https://dev.to/aws-heroes/simplified-configuration-of-sso-profiles-in-aws-cli-using-sso-sessions-8hh).
+
+
+# How to install?
+
+CloudPouch is available for Windows, macOS, and Linux.
+
+Visit https://cloudpouch.dev homepage and click "TRY FOR FREE" yellow button.  
+The site detects your operating system and downloads the correct installer automatically.
+
+## Install on macOS using `brew`
+
+If you are using macOS and Homebrew you can install CloudPouch by executing single command
+
+```
+brew install cloudpouch
+```
+
+Need a quick walkthrough? Watch the short demo video 
+
+![demo](images/CloudPouchBrew.mov)
