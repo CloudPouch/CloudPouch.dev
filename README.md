@@ -7,7 +7,7 @@ On this page:
 * [AWS Credentials & Profiles](#aws-credentials--profiles)
   * [AWS SSO Configuration](#aws-sso-configuration)
 * [How to install?](#how-to-install)
-  * Install on macOS using `brew`
+  * [Install on macOS using `brew`](#install-on-macos-using-brew)
 
 # What is CloudPouch?
 CloudPouch is an advanced FinOps tool designed for AWS cloud cost optimization. It analyzes AWS usage, identifies unnecessary expenses, and provides actionable recommendations. The app is tailored for cloud architects, DevOps, and FinOps specialists, enabling fast detection of cost anomalies, resource waste, and optimization opportunities.
@@ -128,4 +128,4 @@ brew install cloudpouch
 
 Need a quick walkthrough? Watch the short demo video 
 
-![demo](images/CloudPouchBrew.mov)
+<video src="https://github.com/CloudPouch/CloudPouch.dev/blob/main/images/CloudPouchBrew.mov" width="640" controls></video>
