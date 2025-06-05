@@ -34,6 +34,7 @@ CloudPouch offers built-in automations called ***Cost Insights*** that identify 
 - Identifies unused databases incurring storage costs.
 - Detects over-provisioned DB instances for potential rightsizing.
 - Highlights storage autoscaling behavior and disk utilization issues.
+- Detects databases running in Extended Support mode, calculates their current and cumulative costs, and helps prioritize upgrades to avoid excessive support charges.
 
 ### 4. **Amazon S3 (Simple Storage Service)**  
 - Analyzes storage tiers and suggests lifecycle policies or Intelligent-Tiering to reduce costs.
