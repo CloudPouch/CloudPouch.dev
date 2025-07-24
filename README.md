@@ -69,6 +69,11 @@ CloudPouch offers built-in automations called ***Cost Insights*** that identify 
 ### 12. **AWS CloudWatch**  
 - Highlights excessive or unnecessary CloudWatch Logs storage and ingestion costs.
 
+### 13. **Amazon EKS (Amazon Elastic Container Service for Kubernetes)**  
+- Lists all EKS clusters with version, region, and cost details.
+- Flags clusters running in **Extended Support mode**, which incur an extra **365 USD/month** if not upgraded.
+- Provides cost impact analysis and upgrade planning support to help eliminate hidden support fees.
+
 **Summary**:  
 CloudPouch’s "Cost Insights" automatically analyzes resource utilization and configurations across the above AWS services, providing clear recommendations for optimizing resources, reducing cloud spend, and eliminating redundant or wasteful expenses.
 
