@@ -25,4 +25,11 @@ Resources:
               - rds:DescribeDBClusters
               - rds:DescribeDBInstances
               - rds:DescribeDBSnapshots
+              - elasticfilesystem:DescribeFileSystems
+              - rds:GetMetricData
+              - s3:ListBuckets
+              - cloudwatch:GetMetricData
+              - ec2:GetMetricData
+              - autoscaling:DescribeAutoScalingGroups
+              - compute-optimizer:GetEC2InstanceRecommendation
             Resource: '*'
