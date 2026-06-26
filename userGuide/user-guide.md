@@ -63,7 +63,14 @@ If you want to use a dedicated IAM user with minimal privileges please use the f
                 "organizations:ListAccounts",
                 "rds:DescribeDBClusters",
                 "rds:DescribeDBInstances",
-                "rds:DescribeDBSnapshots"
+                "rds:DescribeDBSnapshots",
+                "elasticfilesystem:DescribeFileSystems",
+                "rds:GetMetricData",
+                "s3:ListBuckets",
+                "cloudwatch:GetMetricData",
+                "ec2:GetMetricData",
+                "autoscaling:DescribeAutoScalingGroups",
+                "compute-optimizer:GetEC2InstanceRecommendations"
             ],
             "Resource": "*"
         }
